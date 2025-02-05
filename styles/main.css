@@ -1,0 +1,310 @@
+:root {
+	/* Primary */
+	--clr-desaturated-red: hsl(0, 100%, 90%);
+	--clr-light-red: hsl(0, 36%, 70%);
+	--clr-soft-red: hsl(0, 93%, 68%);
+
+	/* Neutral */
+	--clr-dark-grayish-red: hsl(0, 6%, 24%);
+
+	/* Font Weight */
+	--font-weight-light: 200;
+	--font-weight-medium: 400;
+	--font-weight-heavy: 600;
+
+	/* Linear Gradient */
+	--linear-gradient-white: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+	--linear-gradient-salmon: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+}
+
+*, *::after, *::before {
+	font-family: "Josefin Sans", serif;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	user-select: none;
+	max-width: 100%;
+}
+
+body {
+	width: 100%;
+	height: 100dvh;
+	/* overflow: hidden; */
+	background-image: var(--linear-gradient-white);
+}
+
+.container {
+	margin-inline: auto;
+}
+
+
+
+
+.logo {
+	width: 8rem;
+	margin-block: 2rem;
+	margin-left: 2rem;
+}
+
+
+.hero-mobile {
+	width: 100%;
+}
+
+.hero-desktop {
+	display: none;
+}
+
+
+.details {
+	text-align: center;
+	padding: 2.5rem 1.5rem;
+}
+
+
+
+h1 {
+	text-transform: uppercase;
+	font-weight: var(--font-weight-medium);
+	letter-spacing: 0.5rem;
+	font-size: 2.5rem;
+}
+
+h1 span {
+	display: block;
+}
+
+h1 span:nth-of-type(1) {
+	color: var(--clr-light-red);
+	font-weight: var(--font-weight-light);
+}
+
+
+.details p {
+	line-height: 1.5rem;
+	color: var(--clr-light-red);
+	margin-block: 1.5rem;
+}
+
+
+
+
+.input-wrapper {
+	position: relative;
+}
+
+input::placeholder {
+	color: var(--clr-light-red);
+	opacity: 0.5;
+}
+
+input[type=email] {
+	width: 100%;
+	height: 3.5rem;
+	border-radius: 50px;
+	font-size: 1rem;
+
+	padding-left: 2rem;
+	/* border:none; */
+	border: 2px solid rgba(186, 184, 184, 0.593);
+
+}
+
+button {
+	position: absolute;
+	width: 4rem;
+	height: 3.5rem;
+	border-radius: 50px;
+	background-image: var(--linear-gradient-salmon);
+	border: none;
+	right: 0;
+	box-shadow: inset -10px 0px 10px 5px hsl(0, 74%, 74%), rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	;
+	transition: all 0.3s ease 0s;
+}
+
+
+
+.error-icon {
+	display: none;
+	width: 1.5rem;
+	position: absolute;
+	right: 5rem;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+img {
+	/* outline: 1px solid black; */
+	width: 0.9rem;
+}
+
+
+button:hover {
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+	cursor: pointer;
+	background-image: none;
+	background-color: var(--clr-desaturated-red);
+
+
+}
+
+
+
+.details .message {
+	text-align: left;
+	font-size: 1rem;
+	margin-top: 0.5rem;
+	margin-left: 2rem;
+	height: 1rem;
+}
+
+
+.show {
+	display: block
+}
+
+
+
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px/48rem and up) */
+@media only screen and (min-width: 768px) {
+	body {
+		background-image: url('/images/bg-pattern-desktop.svg');
+		background-size: contain;
+	}
+
+	.container {
+
+		margin-inline: 0;
+		/* max-width: 1152px; */
+		/* outline: 10px solid green; */
+	}
+
+	main {
+		height: 100dvh;
+		display: grid;
+		grid-template-rows: 20% 80%;
+		grid-template-columns: 50% 50%;
+		grid-template-areas:
+			"logo   hero"
+			"details hero"
+		;
+	}
+
+	h1, p {
+		text-align: left;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+
+
+	button {
+		width: 5.5rem;
+	}
+
+
+	.error-icon {
+
+		right: 6.5rem;
+
+	}
+
+	.image-wrapper {
+		width: 100%;
+		grid-area: logo;
+		justify-self: center;
+		align-self: center;
+		max-width: 38rem;
+		/* outline:1px solid blue; */
+	}
+
+
+	.logo {
+		width: 10rem;
+	}
+
+
+	.input-wrapper {
+		margin-top: 2rem;
+	}
+
+	.details {
+		grid-area: details;
+		/* outline: 1px solid blue; */
+		justify-self: center;
+		align-self: start;
+		max-width: 38rem;
+
+	}
+
+	.details p {
+		font-size: 1.2rem;
+		padding-right: 5rem;
+		line-height: 1.5rem;
+	}
+
+
+
+	.hero-mobile {
+
+		display: none;
+	}
+
+	.hero-desktop {
+		grid-area: hero;
+		display: inline-block;
+		width: 100%;
+		height: 100%;
+	}
+
+
+
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 1152px) {}
+
+
+
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+
+
+	h1 {
+		font-size: 4.5rem;
+		letter-spacing: 1rem;
+	}
+
+	.container {
+		margin-inline: auto;
+		max-width: 2000px;
+		/* overflow-y: hidden; */
+	}
+
+	main {
+		grid-template-columns: 60% 40%;
+	}
+
+}
