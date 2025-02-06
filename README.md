@@ -61,16 +61,13 @@ Use this section to recap over some of your major learnings while working throug
 
 To see how you can add code snippets, see below:
 
-Manually set the height to prevent empty space at the bottom after submitting the button. 
-```css
-.details .message {
-  text-align: left;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  margin-left: 2rem;
-  height: 1rem; /*this*/
-}
-```
+Use fr instead of % for grid-template-columns and grid-template rows to fix the extra empty space below when the window is being shorten. 
+To know more check out ![here](https://stackoverflow.com/questions/45090726/the-difference-between-percentage-and-fr-units)
+Previous when use percentage: 
+![alt text](image.png)
+
+After using fr, there should be no more empty space below the image. 
+
 
 
 Can have nested ternary operator
