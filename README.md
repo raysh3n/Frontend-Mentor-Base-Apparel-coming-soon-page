@@ -57,11 +57,8 @@ Users should be able to:
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
-
-Use fr instead of % for grid-template-columns and grid-template rows to fix the extra empty space below when the window is being shorten. 
+- Use fr instead of % for grid-template-columns and grid-template rows to fix the extra empty space below when the window is being shorten. 
 To know more check out ![here](https://stackoverflow.com/questions/45090726/the-difference-between-percentage-and-fr-units)
 Previous when use percentage: 
 ![alt text](image.png)
@@ -70,13 +67,13 @@ After using fr, there should be no more empty space below the image.
 
 
 
-Can have nested ternary operator
+- Can have nested ternary operator
 ```js
 message.textContent = isValid ? 'Submitted' : result ? 'Please provide a valid email' : 'No email provided';
 }
 ```
 
-Toggle. The second parameter can be used. Add show class based on the 2nd parameter. 
+- Toggle. The second parameter can be used. Add show class based on the 2nd parameter. 
 ```js
     errorIcon.classList.toggle('show', !isValid);
 
